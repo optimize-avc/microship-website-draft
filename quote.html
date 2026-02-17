@@ -6,7 +6,8 @@
 <title>Get a Free Quote — MicroShip Inc. | Chicagoland Moving</title>
 <meta name="description" content="Get a free, no-obligation moving quote from MicroShip Inc. Fill out our quick form and we'll get back to you within 24 hours.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/premium.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--navy:#0a1628;--navy-light:#132039;--navy-mid:#1a2d50;--gold:#d4a853;--gold-light:#e8c97a;--gold-dark:#b8912e;--white:#fff;--text:#e2ddd5;--text-muted:#8a8680;--glass:rgba(255,255,255,0.06);--glass-border:rgba(255,255,255,0.1);--radius:16px;--radius-lg:24px;--font:'Plus Jakarta Sans',system-ui,sans-serif;--transition:0.3s cubic-bezier(0.4,0,0.2,1)}
@@ -145,25 +146,25 @@ noscript .form-buttons .btn-next{display:none}
           <div class="type-grid">
             <label class="type-card" onclick="this.querySelector('input').checked=true;document.querySelectorAll('.type-card').forEach(c=>c.classList.remove('selected'));this.classList.add('selected')">
               <input type="radio" name="move_type" value="small" required>
-              <div class="type-icon">📦</div>
+              <div class="type-icon"><svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="#0a1628" stroke-width="2"><rect x="6" y="16" width="36" height="26" rx="2"/><path d="M6 22h36" stroke="#d4a853"/><path d="M20 16V10h8v6"/></svg></div>
               <h3>Small Move</h3>
               <p>Studio, dorm, single room, or a few items</p>
             </label>
             <label class="type-card" onclick="this.querySelector('input').checked=true;document.querySelectorAll('.type-card').forEach(c=>c.classList.remove('selected'));this.classList.add('selected')">
               <input type="radio" name="move_type" value="large">
-              <div class="type-icon">🏠</div>
+              <div class="type-icon"><svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="#0a1628" stroke-width="2"><path d="M4 44V20l20-14 20 14v24H4z"/><rect x="18" y="28" width="12" height="16" stroke="#d4a853"/></svg></div>
               <h3>Larger Move</h3>
               <p>Multi-room apartment or full home</p>
             </label>
             <label class="type-card" onclick="this.querySelector('input').checked=true;document.querySelectorAll('.type-card').forEach(c=>c.classList.remove('selected'));this.classList.add('selected')">
               <input type="radio" name="move_type" value="piano">
-              <div class="type-icon">🎹</div>
+              <div class="type-icon"><svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="#0a1628" stroke-width="2"><rect x="6" y="20" width="36" height="22" rx="2"/><path d="M6 42c0-12 9-22 18-22s18 10 18 22" stroke="#d4a853" fill="none"/><rect x="12" y="8" width="4" height="12"/><rect x="20" y="4" width="4" height="16"/><rect x="28" y="8" width="4" height="12"/></svg></div>
               <h3>Piano Move</h3>
               <p>Upright, baby grand, or concert grand</p>
             </label>
             <label class="type-card" onclick="this.querySelector('input').checked=true;document.querySelectorAll('.type-card').forEach(c=>c.classList.remove('selected'));this.classList.add('selected')">
               <input type="radio" name="move_type" value="storage">
-              <div class="type-icon">🏪</div>
+              <div class="type-icon"><svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="#0a1628" stroke-width="2"><rect x="4" y="14" width="40" height="28" rx="2"/><path d="M4 14l20-8 20 8" stroke="#d4a853"/><rect x="14" y="24" width="8" height="18"/><rect x="26" y="24" width="8" height="18"/></svg></div>
               <h3>Storage</h3>
               <p>Moving items to/from storage</p>
             </label>

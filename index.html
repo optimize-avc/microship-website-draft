@@ -12,7 +12,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/premium.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -274,12 +275,15 @@ h1,h2,h3,h4,h5,h6{color:var(--white);line-height:1.2;font-weight:700}
 
 <main>
 <!-- ══════ HERO ══════ -->
-<section class="hero" id="hero">
+<section class="hero hero-premium" id="hero">
   <div class="hero-bg">
     <div class="mesh-fallback" aria-hidden="true"></div>
     <canvas id="heroCanvas" aria-hidden="true"></canvas>
   </div>
+  <div class="hero-diagonal" aria-hidden="true"></div>
+  <div class="hero-geo-accent" aria-hidden="true"></div>
   <div class="container hero-content">
+    <div class="hero-accent-line" aria-hidden="true"></div>
     <div class="hero-badge"><span class="dot"></span> Serving Chicagoland for 31+ Years</div>
     <h1>Your #1 <span class="highlight">Small Move</span> Company</h1>
     <p>The biggest small move company in the Midwest. Licensed, insured, and trusted by thousands of families across Chicagoland since 1994.</p>
@@ -322,6 +326,8 @@ h1,h2,h3,h4,h5,h6{color:var(--white);line-height:1.2;font-weight:700}
   </div>
 </section>
 
+<div class="section-divider" aria-hidden="true"><div class="diamond"></div></div>
+
 <!-- ══════ SERVICES ══════ -->
 <section class="services" id="services">
   <div class="container">
@@ -332,43 +338,43 @@ h1,h2,h3,h4,h5,h6{color:var(--white);line-height:1.2;font-weight:700}
     </div>
     <div class="services-grid">
       <div class="glass-card service-card reveal">
-        <div class="icon">📦</div>
+        <div class="icon"><div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#0a1628" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="16" width="36" height="26" rx="2"/><path d="M6 22h36" stroke="#d4a853"/><path d="M20 16V10h8v6"/><line x1="24" y1="22" x2="24" y2="42"/></svg></div></div>
         <h3>Small Moves</h3>
         <p>Studio apartments, dorm rooms, single items — no job is too small. We're literally built for this.</p>
         <a href="services.html#small-moves" class="learn-more">Learn more</a>
       </div>
       <div class="glass-card service-card reveal">
-        <div class="icon">🏠</div>
+        <div class="icon"><div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#0a1628" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 44V20l20-14 20 14v24H4z"/><rect x="18" y="28" width="12" height="16" stroke="#d4a853"/><path d="M4 20l20-14 20 14" stroke="#d4a853"/></svg></div></div>
         <h3>Larger Moves</h3>
         <p>Growing out of your space? We handle multi-room moves with the same personal touch.</p>
         <a href="services.html#larger-moves" class="learn-more">Learn more</a>
       </div>
       <div class="glass-card service-card reveal">
-        <div class="icon">🎹</div>
+        <div class="icon"><div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#0a1628" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="20" width="36" height="22" rx="2"/><path d="M6 42c0-12 9-22 18-22s18 10 18 22" stroke="#d4a853" fill="none"/><rect x="12" y="8" width="4" height="12"/><rect x="20" y="4" width="4" height="16"/><rect x="28" y="8" width="4" height="12"/></svg></div></div>
         <h3>Piano Moving</h3>
         <p>Uprights, baby grands, and concert grands moved safely with specialized equipment and expertise.</p>
         <a href="services.html#piano" class="learn-more">Learn more</a>
       </div>
       <div class="glass-card service-card reveal">
-        <div class="icon">📋</div>
+        <div class="icon"><div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#0a1628" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6H16a2 2 0 00-2 2v32a2 2 0 002 2h16"/><path d="M20 12h8M20 18h6" stroke="#d4a853"/><circle cx="36" cy="28" r="8"/><path d="M36 24v4l3 2" stroke="#d4a853"/></svg></div></div>
         <h3>Packing Services</h3>
         <p>Professional packing with premium materials. We treat your belongings like our own.</p>
         <a href="services.html#packing" class="learn-more">Learn more</a>
       </div>
       <div class="glass-card service-card reveal">
-        <div class="icon">🏪</div>
+        <div class="icon"><div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#0a1628" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="14" width="40" height="28" rx="2"/><path d="M4 14l20-8 20 8" stroke="#d4a853"/><rect x="14" y="24" width="8" height="18"/><rect x="26" y="24" width="8" height="18"/><circle cx="18" cy="22" r="2" fill="#d4a853" stroke="none"/></svg></div></div>
         <h3>Storage Solutions</h3>
         <p>Need to store between moves? We offer secure, climate-controlled storage options.</p>
         <a href="services.html#storage" class="learn-more">Learn more</a>
       </div>
       <div class="glass-card service-card reveal">
-        <div class="icon">👴</div>
+        <div class="icon"><div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#0a1628" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 44s14-8 14-20a14 14 0 10-28 0c0 12 14 20 14 20z" stroke="#d4a853"/><path d="M20 20c0-2 2-4 4-4s4 2 4 4-4 8-4 8-4-6-4-8z"/><path d="M16 30l-4 4m20-4l4 4"/></svg></div></div>
         <h3>Senior Moves</h3>
         <p>Compassionate, patient service for seniors downsizing or transitioning to assisted living.</p>
         <a href="services.html#senior" class="learn-more">Learn more</a>
       </div>
       <div class="glass-card service-card reveal">
-        <div class="icon">🏛️</div>
+        <div class="icon"><div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="#0a1628" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 42V12l16-8 16 8v30"/><path d="M4 42h40" stroke="#d4a853"/><rect x="18" y="22" width="12" height="20"/><circle cx="24" cy="18" r="4" stroke="#d4a853"/><path d="M14 18h-2v24M36 18h-2v24"/></svg></div></div>
         <h3>Estate Breakups</h3>
         <p>Handling estate distributions with sensitivity and efficiency. We manage the logistics so you don't have to.</p>
         <a href="services.html#estate" class="learn-more">Learn more</a>
@@ -400,6 +406,8 @@ h1,h2,h3,h4,h5,h6{color:var(--white);line-height:1.2;font-weight:700}
     </div>
   </div>
 </section>
+
+<div class="section-divider" aria-hidden="true"><div class="diamond"></div></div>
 
 <!-- ══════ ABOUT PREVIEW ══════ -->
 <section class="about-preview">
@@ -435,23 +443,53 @@ h1,h2,h3,h4,h5,h6{color:var(--white);line-height:1.2;font-weight:700}
     </div>
     <div class="testimonials-wrapper">
       <div class="testimonials-track" id="testimonialTrack">
-        <div class="testimonial-card">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <div class="testimonial-card google-review-card">
+          <div class="google-logo-badge"><svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 001 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+          <div class="google-review-header">
+            <div class="review-avatar" style="background:#4285F4">TC</div>
+            <div class="review-author-info">
+              <div class="author">Tami Combs</div>
+              <div class="review-date">Verified Customer</div>
+            </div>
+          </div>
+          <div class="star-rating"><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
           <blockquote>"Fast, friendly service and items arrived in PERFECT condition. I couldn't have asked for a better experience. MicroShip made what I thought would be a nightmare into the easiest move I've ever had. Highly recommend!"</blockquote>
-          <div class="author">Tami Combs</div>
-          <div class="author-sub">Google Review</div>
+          <div class="review-footer">
+            <div class="posted-on-google"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 001 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg> Posted on Google</div>
+            <div class="verified-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Verified</div>
+          </div>
         </div>
-        <div class="testimonial-card">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <div class="testimonial-card google-review-card">
+          <div class="google-logo-badge"><svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 001 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+          <div class="google-review-header">
+            <div class="review-avatar" style="background:#34A853">LK</div>
+            <div class="review-author-info">
+              <div class="author">Laura B. Koz</div>
+              <div class="review-date">Verified Customer</div>
+            </div>
+          </div>
+          <div class="star-rating"><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
           <blockquote>"From the first 'Hello, how may I help you' I felt at ease. They were professional, on time, and handled everything with such care. I've used big moving companies before — MicroShip blows them all away."</blockquote>
-          <div class="author">Laura B. Koz</div>
-          <div class="author-sub">Google Review</div>
+          <div class="review-footer">
+            <div class="posted-on-google"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 001 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg> Posted on Google</div>
+            <div class="verified-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Verified</div>
+          </div>
         </div>
-        <div class="testimonial-card">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <div class="testimonial-card google-review-card">
+          <div class="google-logo-badge"><svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 001 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+          <div class="google-review-header">
+            <div class="review-avatar" style="background:#EA4335">JK</div>
+            <div class="review-author-info">
+              <div class="author">Jon Krongard</div>
+              <div class="review-date">Verified Customer</div>
+            </div>
+          </div>
+          <div class="star-rating"><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#d4a853"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
           <blockquote>"Moving is stressful enough, but the professional team at Micro Ship make it so easy and as stress-free as possible. They treated my belongings like their own. I will absolutely use them again."</blockquote>
-          <div class="author">Jon Krongard</div>
-          <div class="author-sub">Google Review</div>
+          <div class="review-footer">
+            <div class="posted-on-google"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 001 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg> Posted on Google</div>
+            <div class="verified-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Verified</div>
+          </div>
         </div>
       </div>
       <div class="testimonial-dots" aria-label="Testimonial navigation">
