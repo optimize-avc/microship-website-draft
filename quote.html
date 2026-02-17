@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Free Quote — MicroShip Inc. | Chicagoland Moving</title>
+<meta name="description" content="Get a free, no-obligation moving quote from MicroShip Inc. Fill out our quick form and we'll get back to you within 24 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0a1628;--navy-light:#132039;--navy-mid:#1a2d50;--gold:#d4a853;--gold-light:#e8c97a;--gold-dark:#b8912e;--white:#fff;--text:#e2ddd5;--text-muted:#8a8680;--glass:rgba(255,255,255,0.06);--glass-border:rgba(255,255,255,0.1);--radius:16px;--radius-lg:24px;--font:'Plus Jakarta Sans',system-ui,sans-serif;--transition:0.3s cubic-bezier(0.4,0,0.2,1)}
+html{scroll-behavior:smooth}body{font-family:var(--font);background:var(--navy);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}a{color:var(--gold);text-decoration:none;transition:color var(--transition)}a:hover{color:var(--gold-light)}
+h1,h2,h3,h4{color:var(--white);line-height:1.2;font-weight:700}.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-weight:600;font-size:1rem;cursor:pointer;border:none;transition:all var(--transition);font-family:var(--font)}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--navy);box-shadow:0 4px 24px rgba(212,168,83,0.3)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(212,168,83,0.5);color:var(--navy)}
+.btn-outline{background:transparent;color:var(--gold);border:2px solid var(--gold)}.btn-outline:hover{background:var(--gold);color:var(--navy)}
+.section-label{text-transform:uppercase;letter-spacing:3px;font-size:0.8rem;color:var(--gold);font-weight:600;margin-bottom:12px}
+.section-title{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:20px}
+.glass-card{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--radius);padding:32px}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:all var(--transition)}
+.site-header.scrolled{background:rgba(10,22,40,0.95);backdrop-filter:blur(20px);padding:12px 0;box-shadow:0 4px 30px rgba(0,0,0,0.3)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}.logo img{height:48px;width:auto}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{color:var(--text);font-weight:500;font-size:0.95rem;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--gold);transition:width var(--transition)}
+.nav-links a:hover{color:var(--white)}.nav-links a:hover::after{width:100%}.nav-links a.active{color:var(--gold)}.nav-links a.active::after{width:100%}
+.header-cta .btn{padding:10px 24px;font-size:0.9rem}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white)}
+.mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,22,40,0.98);backdrop-filter:blur(20px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-nav.open{display:flex}.mobile-nav a{color:var(--white);font-size:1.5rem;font-weight:600}
+.mobile-nav .close-btn{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--white);font-size:2rem;cursor:pointer}
+@media(max-width:900px){.nav-links,.header-cta{display:none}.hamburger{display:flex}}
+
+.page-hero{padding:160px 0 60px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(26,45,80,0.8),transparent 60%),radial-gradient(ellipse at 70% 30%,rgba(212,168,83,0.08),transparent 50%)}
+.page-hero h1{font-size:clamp(2.5rem,6vw,4rem);margin-bottom:16px;position:relative}.page-hero p{font-size:1.2rem;color:var(--text-muted);max-width:600px;margin:0 auto;position:relative}
+
+.quote-section{padding:40px 0 120px}
+.quote-wrapper{max-width:700px;margin:0 auto}
+
+/* Progress bar */
+.progress-bar{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:48px}
+.progress-step{display:flex;align-items:center;gap:8px}
+.progress-step .step-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;border:2px solid var(--glass-border);color:var(--text-muted);transition:all var(--transition)}
+.progress-step.active .step-num{border-color:var(--gold);background:var(--gold);color:var(--navy)}
+.progress-step.done .step-num{border-color:var(--gold);background:rgba(212,168,83,0.2);color:var(--gold)}
+.progress-step .step-label{font-size:0.8rem;color:var(--text-muted)}
+.progress-step.active .step-label{color:var(--white)}
+.progress-line{width:40px;height:2px;background:var(--glass-border)}
+.progress-line.active{background:var(--gold)}
+@media(max-width:600px){.progress-step .step-label{display:none}.progress-line{width:24px}}
+
+/* Form steps */
+.form-step{display:none}
+.form-step.active{display:block}
+.form-step h2{font-size:1.5rem;margin-bottom:8px;text-align:center}
+.form-step .step-desc{color:var(--text-muted);text-align:center;margin-bottom:32px}
+
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:0.9rem;font-weight:500;color:var(--text);margin-bottom:6px}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:rgba(255,255,255,0.06);border:1px solid var(--glass-border);border-radius:var(--radius);padding:14px 18px;color:var(--white);font-family:var(--font);font-size:1rem;transition:border-color var(--transition);outline:none}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
+.form-group textarea{min-height:100px;resize:vertical}
+.form-group select option{background:var(--navy);color:var(--white)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:480px){.form-row{grid-template-columns:1fr}}
+
+/* Move type cards */
+.type-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:480px){.type-grid{grid-template-columns:1fr}}
+.type-card{padding:24px;border-radius:var(--radius);background:var(--glass);border:2px solid var(--glass-border);cursor:pointer;text-align:center;transition:all var(--transition)}
+.type-card:hover{border-color:rgba(212,168,83,0.4)}
+.type-card.selected{border-color:var(--gold);background:rgba(212,168,83,0.1)}
+.type-card .type-icon{font-size:2rem;margin-bottom:8px}
+.type-card h3{font-size:1rem;margin-bottom:4px}
+.type-card p{font-size:0.8rem;color:var(--text-muted)}
+.type-card input{display:none}
+
+.form-buttons{display:flex;gap:16px;margin-top:32px}
+.form-buttons .btn{flex:1;justify-content:center}
+
+/* No-JS fallback: show all steps */
+noscript .form-step{display:block!important;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--glass-border)}
+noscript .progress-bar{display:none}
+noscript .form-buttons .btn-back{display:none}
+noscript .form-buttons .btn-next{display:none}
+
+.trust-note{text-align:center;margin-top:32px;font-size:0.85rem;color:var(--text-muted)}
+.trust-note strong{color:var(--gold)}
+
+.site-footer{background:var(--navy-light);border-top:1px solid var(--glass-border);padding:80px 0 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand p{color:var(--text-muted);margin-top:16px;font-size:0.9rem}
+.footer-col h4{font-size:0.9rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;color:var(--gold)}
+.footer-col ul{list-style:none}.footer-col li{margin-bottom:10px}.footer-col a{color:var(--text-muted);font-size:0.9rem}.footer-col a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid var(--glass-border);padding-top:32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:0.85rem;color:var(--text-muted)}
+@media print{.site-header,.mobile-nav,.progress-bar{display:none!important}body{background:#fff;color:#000}h1,h2,h3,h4{color:#000!important}.glass-card,.type-card{background:#f5f5f5;border:1px solid #ddd;backdrop-filter:none}input,textarea,select{background:#f5f5f5!important;color:#000!important;border:1px solid #ccc!important}}
+
+@media(max-width:768px){.reveal,.service-card,.stat-item,.glass-card,.faq-item,.area-card,.blog-card,.review-card,.value-card,.step,.form-step{opacity:1!important;transform:none!important;filter:none!important;transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+  <a href="index.html" class="logo"><img src="assets/images/logo-white.webp" alt="MicroShip Inc." width="180" height="48"></a>
+  <nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+  <div class="header-cta"><a href="tel:+18004797447" class="btn btn-outline" style="padding:10px 24px;font-size:0.9rem">📞 (800) 479-7447</a></div>
+  <button class="hamburger" aria-label="Open menu" onclick="document.getElementById('mobileNav').classList.add('open')"><span></span><span></span><span></span></button>
+</div></header>
+<div class="mobile-nav" id="mobileNav"><button class="close-btn" onclick="this.parentElement.classList.remove('open')">&times;</button><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="reviews.html">Reviews</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="tel:+18004797447" style="color:var(--gold);font-size:1.2rem;margin-top:16px">(800) 479-7447</a></div>
+
+<main>
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label">Free Quote</p>
+    <h1>Get Your Free Moving Quote</h1>
+    <p>Fill out the form below and we'll get back to you within 24 hours with a personalized estimate. No obligation, no pressure.</p>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="container">
+    <div class="quote-wrapper">
+
+      <div class="progress-bar" aria-label="Quote form progress">
+        <div class="progress-step active" data-step="1"><span class="step-num">1</span><span class="step-label">Move Type</span></div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="2"><span class="step-num">2</span><span class="step-label">Locations</span></div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="3"><span class="step-num">3</span><span class="step-label">Details</span></div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="4"><span class="step-num">4</span><span class="step-label">Contact</span></div>
+      </div>
+
+      <form action="#" method="POST" id="quoteForm">
+        <noscript><p style="text-align:center;color:var(--gold);margin-bottom:24px">JavaScript is disabled. All steps are shown below — fill out the form and submit.</p></noscript>
+
+        <!-- Step 1: Move Type -->
+        <div class="form-step active" data-step="1">
+          <h2>What type of move do you need?</h2>
+          <p class="step-desc">Select the option that best describes your move.</p>
+          <div class="type-grid">
+            <label class="type-card" onclick="this.querySelector('input').checked=true;document.querySelectorAll('.type-card').forEach(c=>c.classList.remove('selected'));this.classList.add('selected')">
+              <input type="radio" name="move_type" value="small" required>
+              <div class="type-icon">📦</div>
+              <h3>Small Move</h3>
+              <p>Studio, dorm, single room, or a few items</p>
+            </label>
+            <label class="type-card" onclick="this.querySelector('input').checked=true;document.querySelectorAll('.type-card').forEach(c=>c.classList.remove('selected'));this.classList.add('selected')">
+              <input type="radio" name="move_type" value="large">
+              <div class="type-icon">🏠</div>
+              <h3>Larger Move</h3>
+              <p>Multi-room apartment or full home</p>
+            </label>
+            <label class="type-card" onclick="this.querySelector('input').checked=true;document.querySelectorAll('.type-card').forEach(c=>c.classList.remove('selected'));this.classList.add('selected')">
+              <input type="radio" name="move_type" value="piano">
+              <div class="type-icon">🎹</div>
+              <h3>Piano Move</h3>
+              <p>Upright, baby grand, or concert grand</p>
+            </label>
+            <label class="type-card" onclick="this.querySelector('input').checked=true;document.querySelectorAll('.type-card').forEach(c=>c.classList.remove('selected'));this.classList.add('selected')">
+              <input type="radio" name="move_type" value="storage">
+              <div class="type-icon">🏪</div>
+              <h3>Storage</h3>
+              <p>Moving items to/from storage</p>
+            </label>
+          </div>
+          <div class="form-buttons">
+            <button type="button" class="btn btn-primary btn-next" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Locations -->
+        <div class="form-step" data-step="2">
+          <h2>Where are you moving?</h2>
+          <p class="step-desc">Tell us your pickup and delivery locations.</p>
+          <div class="form-group">
+            <label for="q_from">Moving From *</label>
+            <input type="text" id="q_from" name="from" required placeholder="Address, city, or zip code">
+          </div>
+          <div class="form-group">
+            <label for="q_to">Moving To *</label>
+            <input type="text" id="q_to" name="to" required placeholder="Address, city, or zip code">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q_from_floor">From — Floor/Level</label>
+              <select id="q_from_floor" name="from_floor">
+                <option value="">Select...</option>
+                <option>Ground/1st Floor</option>
+                <option>2nd Floor</option>
+                <option>3rd Floor</option>
+                <option>4th Floor+</option>
+                <option>Elevator Building</option>
+                <option>Storage Unit</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="q_to_floor">To — Floor/Level</label>
+              <select id="q_to_floor" name="to_floor">
+                <option value="">Select...</option>
+                <option>Ground/1st Floor</option>
+                <option>2nd Floor</option>
+                <option>3rd Floor</option>
+                <option>4th Floor+</option>
+                <option>Elevator Building</option>
+                <option>Storage Unit</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-buttons">
+            <button type="button" class="btn btn-outline btn-back" onclick="prevStep()">← Back</button>
+            <button type="button" class="btn btn-primary btn-next" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Details -->
+        <div class="form-step" data-step="3">
+          <h2>Move Details</h2>
+          <p class="step-desc">Help us understand your move better for an accurate quote.</p>
+          <div class="form-group">
+            <label for="q_date">Preferred Move Date *</label>
+            <input type="date" id="q_date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="q_time">Preferred Time</label>
+            <select id="q_time" name="time">
+              <option value="">Flexible</option>
+              <option>Morning (8am - 12pm)</option>
+              <option>Afternoon (12pm - 4pm)</option>
+              <option>Evening (4pm - 7pm)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="q_desc">Describe Your Move</label>
+            <textarea id="q_desc" name="description" placeholder="What items are you moving? Any special requirements (fragile items, heavy furniture, stairs)? The more detail, the more accurate your quote."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Additional Services Needed?</label>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px">
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--text)"><input type="checkbox" name="services[]" value="packing"> Packing</label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--text)"><input type="checkbox" name="services[]" value="unpacking"> Unpacking</label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--text)"><input type="checkbox" name="services[]" value="storage"> Storage</label>
+              <label style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--text)"><input type="checkbox" name="services[]" value="disassembly"> Furniture Disassembly</label>
+            </div>
+          </div>
+          <div class="form-buttons">
+            <button type="button" class="btn btn-outline btn-back" onclick="prevStep()">← Back</button>
+            <button type="button" class="btn btn-primary btn-next" onclick="nextStep()">Continue →</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Contact -->
+        <div class="form-step" data-step="4">
+          <h2>Your Contact Information</h2>
+          <p class="step-desc">We'll use this to send your personalized quote.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q_first">First Name *</label>
+              <input type="text" id="q_first" name="first_name" required placeholder="John">
+            </div>
+            <div class="form-group">
+              <label for="q_last">Last Name *</label>
+              <input type="text" id="q_last" name="last_name" required placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="q_email">Email *</label>
+            <input type="email" id="q_email" name="email" required placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label for="q_phone">Phone *</label>
+            <input type="tel" id="q_phone" name="phone" required placeholder="(555) 123-4567">
+          </div>
+          <div class="form-group">
+            <label for="q_how">How did you hear about us?</label>
+            <select id="q_how" name="referral">
+              <option value="">Select...</option>
+              <option>Google Search</option>
+              <option>Google Maps</option>
+              <option>Yelp</option>
+              <option>Friend/Family Referral</option>
+              <option>Repeat Customer</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-buttons">
+            <button type="button" class="btn btn-outline btn-back" onclick="prevStep()">← Back</button>
+            <button type="submit" class="btn btn-primary" style="flex:2">Submit Quote Request →</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="trust-note">
+        🔒 Your information is secure and will never be shared.<br>
+        <strong>USDOT 570493</strong> — Licensed & Insured — Serving Chicagoland for 31+ years
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="assets/images/logo-white.webp" alt="MicroShip Inc." width="160" height="42" loading="lazy"><p>The biggest small move company in the Midwest. Serving Chicagoland since 1994.</p></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#small-moves">Small Moves</a></li><li><a href="services.html#piano">Piano Moving</a></li><li><a href="services.html#senior">Senior Moves</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+18004797447">(800) 479-7447</a></li><li>Villa Park, IL</li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 MicroShip, Inc. All rights reserved.</span><span>Website by <a href="#">AVC Productions</a></span></div>
+</div></footer>
+<script>
+// Header
+const h=document.querySelector('.site-header');window.addEventListener('scroll',()=>{h.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
+
+// Multi-step form
+let currentStep = 1;
+const totalSteps = 4;
+
+function updateProgress() {
+  document.querySelectorAll('.progress-step').forEach(s => {
+    const n = parseInt(s.dataset.step);
+    s.classList.toggle('active', n === currentStep);
+    s.classList.toggle('done', n < currentStep);
+  });
+  document.querySelectorAll('.progress-line').forEach((line, i) => {
+    line.classList.toggle('active', i < currentStep - 1);
+  });
+  document.querySelectorAll('.form-step').forEach(s => {
+    s.classList.toggle('active', parseInt(s.dataset.step) === currentStep);
+  });
+}
+
+function nextStep() {
+  if (currentStep < totalSteps) {
+    currentStep++;
+    updateProgress();
+    window.scrollTo({top: document.querySelector('.quote-section').offsetTop - 100, behavior: 'smooth'});
+  }
+}
+
+function prevStep() {
+  if (currentStep > 1) {
+    currentStep--;
+    updateProgress();
+    window.scrollTo({top: document.querySelector('.quote-section').offsetTop - 100, behavior: 'smooth'});
+  }
+}
+</script>
+<script>
+setTimeout(()=>{document.querySelectorAll('.reveal').forEach(el=>{el.style.opacity='1';el.style.transform='none'})},2000);
+</script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — MicroShip Inc. | (800) 479-7447</title>
+<meta name="description" content="Contact MicroShip Inc. for your next move. Call (800) 479-7447 or fill out our contact form. Serving Villa Park, IL and all of Chicagoland.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0a1628;--navy-light:#132039;--navy-mid:#1a2d50;--gold:#d4a853;--gold-light:#e8c97a;--gold-dark:#b8912e;--white:#fff;--text:#e2ddd5;--text-muted:#8a8680;--glass:rgba(255,255,255,0.06);--glass-border:rgba(255,255,255,0.1);--radius:16px;--radius-lg:24px;--font:'Plus Jakarta Sans',system-ui,sans-serif;--transition:0.3s cubic-bezier(0.4,0,0.2,1)}
+html{scroll-behavior:smooth}body{font-family:var(--font);background:var(--navy);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}a{color:var(--gold);text-decoration:none;transition:color var(--transition)}a:hover{color:var(--gold-light)}
+h1,h2,h3,h4{color:var(--white);line-height:1.2;font-weight:700}.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-weight:600;font-size:1rem;cursor:pointer;border:none;transition:all var(--transition);font-family:var(--font)}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--navy);box-shadow:0 4px 24px rgba(212,168,83,0.3)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(212,168,83,0.5);color:var(--navy)}
+.section-label{text-transform:uppercase;letter-spacing:3px;font-size:0.8rem;color:var(--gold);font-weight:600;margin-bottom:12px}
+.section-title{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:20px}
+.glass-card{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--radius);padding:32px;transition:all var(--transition)}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:all var(--transition)}
+.site-header.scrolled{background:rgba(10,22,40,0.95);backdrop-filter:blur(20px);padding:12px 0;box-shadow:0 4px 30px rgba(0,0,0,0.3)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}.logo img{height:48px;width:auto}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{color:var(--text);font-weight:500;font-size:0.95rem;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--gold);transition:width var(--transition)}
+.nav-links a:hover{color:var(--white)}.nav-links a:hover::after{width:100%}.nav-links a.active{color:var(--gold)}.nav-links a.active::after{width:100%}
+.header-cta .btn{padding:10px 24px;font-size:0.9rem}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white)}
+.mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,22,40,0.98);backdrop-filter:blur(20px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-nav.open{display:flex}.mobile-nav a{color:var(--white);font-size:1.5rem;font-weight:600}
+.mobile-nav .close-btn{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--white);font-size:2rem;cursor:pointer}
+@media(max-width:900px){.nav-links,.header-cta{display:none}.hamburger{display:flex}}
+
+.page-hero{padding:160px 0 80px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(26,45,80,0.8),transparent 60%),radial-gradient(ellipse at 70% 30%,rgba(212,168,83,0.08),transparent 50%)}
+.page-hero h1{font-size:clamp(2.5rem,6vw,4rem);margin-bottom:16px;position:relative}.page-hero p{font-size:1.2rem;color:var(--text-muted);max-width:600px;margin:0 auto;position:relative}
+
+.contact-section{padding:80px 0 120px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+
+.contact-info .info-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:32px}
+.contact-info .info-icon{width:48px;height:48px;background:linear-gradient(135deg,rgba(212,168,83,0.2),rgba(212,168,83,0.05));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.contact-info .info-content h3{font-size:1.1rem;margin-bottom:4px}
+.contact-info .info-content p{color:var(--text-muted);font-size:0.95rem}
+.contact-info .info-content a{color:var(--gold);font-weight:600}
+.hours-table{width:100%;margin-top:8px;font-size:0.9rem}
+.hours-table td{padding:4px 0;color:var(--text-muted)}
+.hours-table td:first-child{color:var(--text);font-weight:500;width:120px}
+
+.contact-form{display:flex;flex-direction:column;gap:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group label{font-size:0.9rem;font-weight:500;color:var(--text)}
+.form-group input,.form-group textarea,.form-group select{background:rgba(255,255,255,0.06);border:1px solid var(--glass-border);border-radius:var(--radius);padding:14px 18px;color:var(--white);font-family:var(--font);font-size:1rem;transition:border-color var(--transition);outline:none}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
+.form-group textarea{min-height:120px;resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:480px){.form-row{grid-template-columns:1fr}}
+
+.map-section{padding:0 0 120px}
+.map-placeholder{width:100%;height:400px;background:var(--navy-mid);border-radius:var(--radius-lg);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:1rem}
+/* GENERATE: Replace with actual Google Maps embed for Villa Park, IL -->
+
+.site-footer{background:var(--navy-light);border-top:1px solid var(--glass-border);padding:80px 0 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand p{color:var(--text-muted);margin-top:16px;font-size:0.9rem}
+.footer-col h4{font-size:0.9rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;color:var(--gold)}
+.footer-col ul{list-style:none}.footer-col li{margin-bottom:10px}.footer-col a{color:var(--text-muted);font-size:0.9rem}.footer-col a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid var(--glass-border);padding-top:32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:0.85rem;color:var(--text-muted)}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+@media print{.site-header,.mobile-nav{display:none!important}body{background:#fff;color:#000}h1,h2,h3,h4{color:#000!important}.glass-card{background:#f5f5f5;border:1px solid #ddd;backdrop-filter:none}input,textarea{background:#f5f5f5!important;color:#000!important;border:1px solid #ccc!important}}
+
+@media(max-width:768px){.reveal,.service-card,.stat-item,.glass-card,.faq-item,.area-card,.blog-card,.review-card,.value-card,.step,.form-step{opacity:1!important;transform:none!important;filter:none!important;transition:none!important;animation:none!important}}
+</style>
+<noscript><style>.reveal,.service-card,.stat-item,.glass-card,.faq-item,.area-card,.blog-card,.review-card,.value-card,.step,.form-step{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<header class="site-header"><div class="container header-inner">
+  <a href="index.html" class="logo"><img src="assets/images/logo-white.webp" alt="MicroShip Inc." width="180" height="48"></a>
+  <nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html" class="active">Contact</a></li></ul></nav>
+  <div class="header-cta"><a href="quote.html" class="btn btn-primary">Get a Free Quote</a></div>
+  <button class="hamburger" aria-label="Open menu" onclick="document.getElementById('mobileNav').classList.add('open')"><span></span><span></span><span></span></button>
+</div></header>
+<div class="mobile-nav" id="mobileNav"><button class="close-btn" onclick="this.parentElement.classList.remove('open')">&times;</button><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="reviews.html">Reviews</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="quote.html" class="btn btn-primary" style="margin-top:16px">Get a Free Quote</a></div>
+
+<main>
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label">Get in Touch</p>
+    <h1>Contact Us</h1>
+    <p>Have questions? Need a quote? We're here to help. Reach out anytime.</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div class="info-content">
+            <h3>Call Us</h3>
+            <p><a href="tel:+18004797447" style="font-size:1.3rem">(800) 479-7447</a></p>
+            <p>Toll-free — call anytime!</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div class="info-content">
+            <h3>Location</h3>
+            <p>Villa Park, IL<br>Serving all of Chicagoland</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🕐</div>
+          <div class="info-content">
+            <h3>Business Hours</h3>
+            <table class="hours-table">
+              <tr><td>Monday</td><td>8:00 AM – 6:00 PM</td></tr>
+              <tr><td>Tuesday</td><td>8:00 AM – 6:00 PM</td></tr>
+              <tr><td>Wednesday</td><td>8:00 AM – 6:00 PM</td></tr>
+              <tr><td>Thursday</td><td>8:00 AM – 6:00 PM</td></tr>
+              <tr><td>Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+              <tr><td>Saturday</td><td>9:00 AM – 4:00 PM</td></tr>
+              <tr><td>Sunday</td><td>Closed</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🛡️</div>
+          <div class="info-content">
+            <h3>Licensed & Insured</h3>
+            <p>USDOT #570493<br>Fully insured for your protection</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card reveal">
+        <h3 style="margin-bottom:24px;font-size:1.3rem">Send Us a Message</h3>
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required placeholder="John Smith">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="from">Moving From</label>
+              <input type="text" id="from" name="from" placeholder="City, State or Address">
+            </div>
+            <div class="form-group">
+              <label for="to">Moving To</label>
+              <input type="text" id="to" name="to" placeholder="City, State or Address">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="date">Preferred Move Date</label>
+            <input type="date" id="date" name="date">
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Move</label>
+            <textarea id="message" name="message" placeholder="What are you moving? Any special requirements? The more detail, the more accurate your quote."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map-section">
+  <div class="container">
+    <div class="map-placeholder">
+      <!-- GENERATE: Google Maps embed showing Villa Park, IL service area -->
+      <div style="text-align:center">
+        <p style="font-size:2rem;margin-bottom:12px">📍</p>
+        <p><strong style="color:var(--white)">Villa Park, IL</strong></p>
+        <p>Serving all of Chicagoland</p>
+        <p style="margin-top:12px;font-size:0.85rem">Google Maps embed will be added with live API key</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="assets/images/logo-white.webp" alt="MicroShip Inc." width="160" height="42" loading="lazy"><p>The biggest small move company in the Midwest. Serving Chicagoland since 1994.</p></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#small-moves">Small Moves</a></li><li><a href="services.html#piano">Piano Moving</a></li><li><a href="services.html#senior">Senior Moves</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+18004797447">(800) 479-7447</a></li><li>Villa Park, IL</li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 MicroShip, Inc. All rights reserved.</span><span>Website by <a href="#">AVC Productions</a></span></div>
+</div></footer>
+<script>
+const h=document.querySelector('.site-header');window.addEventListener('scroll',()=>{h.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
+const r=document.querySelectorAll('.reveal');const o=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');o.unobserve(el.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});r.forEach(el=>o.observe(el));
+</script>
+<script>
+setTimeout(()=>{document.querySelectorAll('.reveal').forEach(el=>{el.style.opacity='1';el.style.transform='none'})},2000);
+</script>
+</body>
+</html>
